@@ -14,9 +14,10 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   message.appendChild(p);
   message.classList.add('notification', type);
 
-  message.style.position = 'fixed';
-  message.style.top = posTop + 'px';
-  message.style.right = posRight + 'px';
+  message.setAttribute(
+    'style',
+    `position: fixed; top: ${posTop}px; right: ${posRight}px;`,
+  );
 
   body.appendChild(message);
 
